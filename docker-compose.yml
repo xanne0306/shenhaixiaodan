@@ -16,9 +16,9 @@ services:
       # Optional: Mount credentials file if using file-based auth
       - ${GOOGLE_APPLICATION_CREDENTIALS:-/dev/null}:/app/${GOOGLE_APPLICATION_CREDENTIALS:-oauth_creds.json}:ro
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "sh", "-c", "curl -f http://localhost:${PORT:-8888}/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+    # healthcheck:
+      # test: ["CMD", "sh", "-c", "curl -f http://localhost:${PORT:-8888}/health"]
+      # interval: 30s
+      # timeout: 10s
+      # retries: 3
+      # start_period: 40s
